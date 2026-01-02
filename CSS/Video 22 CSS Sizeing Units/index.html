@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizeing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            border: 2px solid rgb(16, 16, 16);
+            width: 80vw;
+            margin: auto;
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 2px solid rgb(183, 66, 66);
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 20px auto;
+            background-color: aquamarine;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+
+        .container > div {
+            font-size: 2em;
+            width: 50%;
+            border: 3px solid rgb(20, 0, 17);
+        }
+
+        .container > div > div {
+            border: 2px solid darkblue;
+            width: 50%;
+        }
+
+        .mycont {
+            border: 2px solid rgb(183, 66, 66);
+            box-sizing: border-box;
+            margin: 23px auto;
+            background-color: yellow;
+            color: black;
+            font-size: 13px;
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This a box
+    </div>
+    <div class="container">
+        <div>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, perspiciatis.</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero recusandae velit error. Recusandae quisquam
+            iusto magnam modi, laborum perferendis quidem doloremque maxime voluptatem quibusdam illum odit porro, hic
+            nihil nisi tenetur aliquam in possimus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam explicabo dolorem quos, in rem deserunt!
+            Excepturi, aliquam. Autem quis sequi distinctio dolor recusandae, voluptate repudiandae qui harum officia
+            consequuntur, enim maiores assumenda? Aperiam praesentium dolores accusamus corporis perferendis. Ipsum
+            vitae accusantium excepturi deserunt repellat culpa, minima voluptates architecto officia, sunt aliquid
+            necessitatibus, praesentium incidunt reiciendis! Maiores temporibus labore totam placeat, quo, aperiam, ab
+            necessitatibus quod minus fugiat architecto. Tempora error nemo tenetur atque reiciendis et nulla, pariatur
+            itaque dolores earum saepe ipsum rem eius aut ducimus veritatis, placeat facilis, harum similique enim
+            sapiente quia soluta! Ratione perspiciatis laboriosam facilis nihil consequatur quos libero soluta voluptas
+            necessitatibus pariatur ducimus officiis sapiente doloribus, maiores nulla. Consequuntur eum odit natus
+            alias. Iusto provident voluptatem voluptatibus?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae doloribus rem voluptates. Quam, soluta
+            aliquid distinctio perspiciatis molestiae libero impedit aut cupiditate, eveniet facere eius voluptatibus
+            blanditiis asperiores dicta? Dolorum velit magni, quidem iste error temporibus fuga dolor molestiae
+            architecto dolores nemo reiciendis laborum, ad tenetur perspiciatis quisquam. Repellendus deserunt, rem
+            quasi inventore quas eum pariatur, nam, et autem quam magni a quos aliquid fugit consequatur enim aspernatur
+            labore. Magni qui voluptate animi ab impedit ipsum nobis corporis, aperiam sint minus voluptatem quisquam
+            molestiae perferendis, quo laudantium consectetur nostrum vero eius earum dolores cupiditate aut molestias
+            dolore. Assumenda quis et inventore minima, dolores doloribus asperiores totam atque culpa saepe quae iste
+            quod magnam error hic tempora neque harum adipisci commodi temporibus. Cumque, aut?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum non sed incidunt.
+        </div>
+    </div>
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+
+</html>

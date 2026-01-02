@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Quary</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        /* @media not | only mediatype and (expressions)
+        CSS CODE */
+        @media only screen and (max-width:445px) {
+            body {
+
+                background-color: blue;
+            }
+        }
+
+        .box {
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            margin: 3px;
+            padding: 3px;
+            display: flex;
+        }
+        @media screen and (orientation: landscape) {
+            .box{
+
+                background-color: 20px solid purple;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Hey i am a red body Guy
+        9:36i
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+
+</html>

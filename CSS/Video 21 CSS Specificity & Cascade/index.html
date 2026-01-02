@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity & Cascade</title>
+</head>
+<style>
+    /* The Specificity of this Selector is 1 */
+    h1.purple {
+        color: purple;
+    }
+    /* The Specificity of this Selector is 10 */
+    .yellow {
+        color: yellow;
+    }
+    
+    /* The Specificity of this Selector is 10+10+1 = 21 means Higher Proirity*/
+    h1.yellow.red {
+        color: rgb(177, 151, 151) ;
+        /* thii important symbol will make this property important so this property will applied no matter what the specificity is */
+    }
+    
+    /* The Specificity of this Selector is 10 */
+    /* [data-x=a] {
+            color: hotpink;
+        } */
+    h1 {
+        color: mediumaquamarine;
+    }
+</style>
+
+<body>
+    <div>
+        <h1 class="yellow red purple">CSS Specificity</h1>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     background-color: rgb(181, 173, 173);
+     padding: 651px;
+     padding-top: 57px;
+     width: 220px;
+     padding-bottom: 22px;
+ }
+
+ .card {
+     background-color: rgb(255, 255, 255);
+     width: 303px;
+     height: 411px;
+     border-radius: 7px;
+     margin: 4px;
+
+ }
+
+ .image {
+     width: 280px;
+     height: 150px;
+     padding: 12px;
+     padding-bottom: 3px;
+ }
+
+ .image img {
+     border-radius: 7px;
+     width: 279px;
+     height: 155px;
+ }
+
+ .content {
+     padding: 4px 13px;
+
+ }
+
+ .capsul {
+
+     padding: 11px 15px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .capsul span {
+     font-size: 12px;
+     padding: 1px;
+     border: 1px solid rgb(184, 184, 184);
+     border-radius: 6px;
+     color: lightslategray;
+ }
+
+ .content span h3 {
+     padding: 0px 2px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ .content p {
+     margin: 5px;
+     font-size: 12px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: lighter;
+     color: lightslategray;
+ }
+
+ .button {
+     text-align: center;
+
+ }
+
+ .button button {
+     padding: 8px 24px;
+     border-radius: 15px;
+     margin-top: 10px;
+     background-color: lightblue;
+     color: blue;
+     font-weight: bold;
+     border: none;
+     cursor: pointer;
+ }
+
+ .button button:hover {
+     background-color: lightskyblue;
+ }

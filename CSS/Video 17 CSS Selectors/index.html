@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /* class Selectors */
+        .red {
+            background-color: rgb(42, 171, 240);
+        }
+
+        .pink {
+            color: green;
+        }
+
+        /* Attribute Selector */
+        [data-x=a] {
+            color: hotpink;
+        }
+
+        /* id selectors */
+        #green {
+            background-color: palegreen;
+        }
+
+        /* child Selectors */
+        div>p {
+            color: palegoldenrod;
+            background-color: maroon;
+        }
+
+        /* Decedant Selectors */
+        div p {
+            color: pink;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+        a:visited {
+            color: rgb(237, 135, 2);
+        }
+
+        a:link {
+            color: palevioletred;
+        }
+
+        a:active {
+            color: black;
+            background-color: mediumseagreen;
+        }
+
+        a:hover {
+            background-color: rgb(100, 255, 255);
+        }
+
+        p:first-child {
+            background-color: rgb(62, 53, 7);
+        }
+    </style>
+</head>
+
+<body>
+    <div data-x="a">
+        Hello,here i used Atrribute Selector
+    </div>
+    <main>
+        <p>
+            I am !st Paragraph
+        </p>
+        <p>
+            I am Second Pargaraph
+        </p>
+    </main>
+    <div class="red">
+        I am a div
+        <article>
+
+            <p>
+                I am a paragraph inside a div
+            </p>
+        </article>
+    </div>
+    <div class="pink">
+        Hello i am 2nd div
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore nostrum voluptate consectetur odio numquam
+            molestias praesentium reiciendis rem alias. Ipsum harum necessitatibus facere sed quod, similique doloribus
+            dolorum amet error?</p>
+    </div>
+    <div id="green">
+        i am id selector
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.instagram.com">Go to Instagram</a>
+</body>
+
+</html>
