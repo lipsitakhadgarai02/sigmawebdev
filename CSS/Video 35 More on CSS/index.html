@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adavanced selectors</title>
+    <style>
+        /* .box:first-child {
+            background-color: blue;
+        }
+
+        .box::first-line {
+            color: yellow;
+        } */
+        /* .boxes *{
+            color: maroon;
+            padding: 6px;
+            border: 2px solid black;
+         } */
+        /* Grouping of selector  */
+        /* p,a,.box, [data-color="primary"]{
+            margin-top: 45px;
+            padding-top: 12px;
+         } */
+        /* .box:nth-child(even) {
+            background-color: mediumaquamarine;
+        } */
+         /* .box:nth-last-child(1){
+            background-color: rgb(96, 244, 170);
+         } */
+
+         /* Used to add content dynamically */
+          /* .boxes::before{
+            content: "Lipsita is good";
+          }
+          .boxes::after{
+            content: "Lipsita is good";
+          } */
+           ::selection{
+            color: brown;
+            background-color: aqua;
+           }
+           .box::first-letter{
+            color: purple;
+           }
+           input::placeholder{
+            color: cadetblue;
+            background-color: beige;
+           }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box"> Hey i am a box </div>
+        <div class="box"> Hey i am a box</div>
+        <div class="box"> Hey i am a box</div>
+        <div class="box"> Hey i am a box</div>
+        <div class="box"> Hey i am a box</div>
+        <input type="text" placeholder="Type your name here">
+        <div class="box"> Hey i am a box</div>
+    </div>
+</body>
+
+</html>
