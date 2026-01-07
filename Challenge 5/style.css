@@ -3,23 +3,48 @@
     margin: 0;
 }
 
+main {
+    background-color: black;
+    color: white;
+    padding: 34px;
+}
+
 :root {
-    --primary-color: rgb(186, 224, 161);
+    --primary-color: rgb(224, 161, 218);
+}
+
+header {
+    position: sticky;
+    top: 0;
 }
 
 nav {
     background-color: var(--primary-color);
     height: 83px;
-    position: sticky;
 }
 
-.container{
-    background-color: rgb(173, 87, 101);
-    margin: 12px 10px;
-    height: 233px;
-    width: 233px;
+.box1 {
+    background-color: rgb(26, 97, 205);
+    height: 70vh;
+    width: 45%;
+    display: inline-block;
+    margin: 38px 49px;
 }
 
+.box2 {
+    background-color: pink;
+    height: 70vh;
+    width: 45%;
+    display: inline-block;
+    margin: 38px 3px;
+}
+
+.container {
+    background-color: rgb(46, 222, 30);
+    margin: 28px;
+}
+
+/* ✅ FIXED selector (only required change) */
 ul li {
     list-style: none;
     display: inline;
@@ -28,5 +53,37 @@ ul li {
     color: rgb(2, 58, 72);
     font-size: large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
+/* optional but safe */
+ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    height: 100px;
+    background-color: bisque;
+}
+
+.textbox {
+    padding: 34px;
+    border: 2px solid white;
+    margin: 114px 34vw;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 56px;
+}
+.logo {
+    height: 32px;
+    width: 32px;
+    background-color: orange;
+    right: 23px;
+    bottom: 10px;
+    position: fixed;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: bold;
+    color: black;
 }
