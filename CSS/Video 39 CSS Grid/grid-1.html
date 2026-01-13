@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-24:42
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,30 @@
     <style>
         .container {
             width: 80vw;
+            height: 100vh;
             border: 2px solid black;
             display: grid;
             /* grid-template-columns: [first] 120px [second] 100px;
             grid-template-rows: 100px 100px 100px; */
-            grid-template-columns: 1fr 4fr 1fr;
-            grid-template-rows: 3fr 3fr 1fr;
-            gap: 34px;
-
-            row-gap: 10px;
-            column-gap: 45px;
+            /* grid-template-columns: 1fr 4fr 1fr; */
+            /* grid-template-columns: repeat(4,2fr);
+             */
+             grid-template-columns: repeat(4,minmax(100px,1fr));
+             /* grid-template-columns: repeat(4,80px); */
+             /* grid-template-rows: repeat(2,40px); */
+             grid-template-rows: 3fr 3fr 1fr;
+             /* justify-content: center; */
+            /* gap: 34px; */
+            justify-items: center;
+            align-items: center;
+            /* row-gap: 10px; */
+            /* column-gap: 45px; */
         }
 
         .item {
             border: 2px solid rgb(209, 15, 15);
             height: 50px;
-            /* width: 50px; */
-
+            width: 50px;
         }
 
         /* 
@@ -32,29 +39,36 @@
             grid-row: 1/2;
             /* grid-row-start: 1;
             grid-row-end: 2;*/
-        grid-column: 1/2;
+        /* grid-column: 1/2; */
+
         /*
             grid-column-start: 1;
             grid-column-end: 1; 
             similar syntax to write above and below line
+        }
             */
+
+        .item-3 {
+            align-self: flex-start;
+            justify-self: center;
+              
         }
 
-        .item-1 {
-            grid-row: 1/2;
-            grid-column: 1/2;
-
+        .item-2 {
+            align-self: center;
+            justify-self:  flex-end;
+              
         }
 
-        */
+    
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="item item-1">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
         <div class="item item-4">4</div>
         <div class="item">5</div>
     </div>
