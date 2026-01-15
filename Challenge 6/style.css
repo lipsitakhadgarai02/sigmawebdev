@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Navbar container */
+.cont {
+    margin: 20px 46px;
+    margin-top: 20px;
+    width: 94vw;
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    border-radius: 6px;
+    background-color: rgb(241, 240, 240);
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.logo img {
+
+    height: 59px;
+    width: 108px;
+
+}
+
+
+.item {
+    display: flex;
+    height: 20vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-item {
+    padding: 0px 25px;
+    font-size: 20px;
+}
+
+.load img {
+    height: 15px;
+    width: 20px;
+    margin-right: 12px;
+}
+
+.load {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.load a {
+    font-size: 20px;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+button {
+    background-color: rgb(238, 185, 80);
+    height: 30px;
+    width: 96px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+     font-family: monospace;
+}
