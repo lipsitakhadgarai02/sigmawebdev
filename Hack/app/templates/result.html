@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Your Results</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Your Resume Score</h1>
+		<div class="score-wrap">
+			<div class="score-ring" data-score="{{ score }}">
+				<svg width="140" height="140" viewBox="0 0 140 140" class="ring">
+					<circle class="ring-bg" cx="70" cy="70" r="56" />
+					<circle class="ring-fg" cx="70" cy="70" r="56" />
+				</svg>
+				<div class="ring-value">{{ score }}</div>
+			</div>
+			<div class="score-badge">
+				<span class="score-value" style="color: {{ 'green' if score >= 80 else ('#d97706' if score >= 50 else '#dc2626') }};">{{ score }}</span>
+				<span class="score-max">/100</span>
+			</div>
+		</div>
+		<h2>Details</h2>
+		<div class="grid">
+			<div class="card">
+				<h3>ATS Breakdown</h3>
+				<ul>
+					<li><strong>Skills & Keywords (40%)</strong>: {{ details.get('score_keywords_40', 0) }}/40</li>
+					<li><strong>Structure (20%)</strong>: {{ details.get('score_structure_20', 0) }}/20</li>
+					<li><strong>Action Verbs (20%)</strong>: {{ details.get('score_action_verbs_20', 0) }}/20</li>
+					<li><strong>Length (20%)</strong>: {{ details.get('score_word_count_20', 0) }}/20</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h3>Stats</h3>
+				<ul>
+					<li><strong>Keywords found</strong>: {{ details.get('keyword_hits') }}</li>
+					<li><strong>Action verbs</strong>: {{ details.get('action_verbs') }}</li>
+					<li><strong>Word count</strong>: {{ details.get('word_count') }}</li>
+					<li><strong>Core sections present</strong>: {{ details.get('sections_present') }}/4</li>
+				</ul>
+			</div>
+		</div>
+		<h2>Suggestions</h2>
+		<div class="card">
+			<details open>
+				<summary>Top improvements</summary>
+				<ul>
+					{% for s in suggestions %}
+						<li>{{ s }}</li>
+					{% else %}
+						<li>No suggestions. Great job!</li>
+					{% endfor %}
+				</ul>
+			</details>
+		</div>
+		<p><a href="{{ url_for('main.index') }}">Analyze another resume</a></p>
+		<p><a href="{{ url_for('main.history') }}">View your recent analyses</a></p>
+	</div>
+
+<script>
+// Animate circular progress based on score
+(function(){
+	var el = document.querySelector('.score-ring');
+	if(!el) return;
+	var score = parseInt(el.getAttribute('data-score')||'0', 10);
+	var fg = el.querySelector('.ring-fg');
+	var circumference = 2 * Math.PI * 56; // r = 56
+	fg.style.strokeDasharray = circumference;
+	var offset = circumference * (1 - Math.max(0, Math.min(100, score)) / 100);
+	fg.style.strokeDashoffset = circumference; // start hidden
+	requestAnimationFrame(function(){
+		fg.style.transition = 'stroke-dashoffset 900ms ease';
+		fg.style.strokeDashoffset = offset;
+	});
+	// Color by score
+	var color = score >= 80 ? '#16a34a' : (score >= 50 ? '#d97706' : '#dc2626');
+	fg.style.stroke = color;
+})();
+</script>
+</body>
+</html>
+
+

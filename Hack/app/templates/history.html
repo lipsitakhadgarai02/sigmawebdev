@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Your History</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Recent Analyses</h1>
+		<p><a href="{{ url_for('main.index') }}">Back to analyzer</a></p>
+		{% if rows %}
+		<table class="table">
+			<thead>
+				<tr><th>Filename</th><th>Score</th><th>Words</th><th>Date</th></tr>
+			</thead>
+			<tbody>
+				{% for r in rows %}
+					<tr>
+						<td>{{ r[1] }}</td>
+						<td>{{ r[2] }}</td>
+						<td>{{ r[3] }}</td>
+						<td>{{ r[4] }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% else %}
+		<p>No history yet. Upload a resume to see results here.</p>
+		{% endif %}
+	</div>
+</body>
+</html>
+
+
