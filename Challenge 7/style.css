@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar container */
+.cont {
+    margin: 20px 46px;
+    margin-top: 20px;
+    width: 94vw;
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    border-radius: 6px;
+    background-color: rgb(241, 240, 240);
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.logo img {
+
+    height: 59px;
+    width: 108px;
+
+}
+
+
+.item {
+    display: flex;
+    height: 20vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    padding: 0px 25px;
+    font-size: 20px;
+}
+
+.load img {
+    height: 15px;
+    width: 20px;
+    margin-right: 12px;
+}
+
+.logo1 img {
+    height: 59px;
+    width: 123px;
+    padding-left: 20px;
+}
+
+.load {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.load a {
+    font-size: 20px;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+.load button {
+    background-color: rgb(238, 185, 80);
+    height: 30px;
+    width: 96px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.text1 {
+    font-size: 25px;
+    font-family: monospace;
+    margin-left: -3px;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 20px;
+    padding: 0px 50px;
+    padding-bottom: 80px;
+}
+
+.container1 .itemb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 26vw;
+    border-radius: 9px;
+    gap: 40px;
+    background-color: rgb(241, 240, 240);
+}
+
+.itemb button {
+    height: 30px;
+    width: 129px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.lang {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
