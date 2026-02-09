@@ -115,7 +115,7 @@
     height: 25vh;
     width: 26vw;
     border-radius: 9px;
-    gap: 40px;
+    gap: 11px;
     background-color: rgb(241, 240, 240);
 }
 
@@ -132,4 +132,16 @@
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+.itemb .buttons a {
+    display: inline-block;
+    height: 30px;
+    width: 129px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(238, 185, 80);
+    color: black;
 }
