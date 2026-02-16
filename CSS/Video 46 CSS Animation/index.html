@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+</head>
+<style>
+
+    .container {
+        width: 80vw;
+        height: 30vh;
+        background-color: lightblue;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(44, 58, 163);
+        animation: Lipsitakaanimation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 1s;
+        animation-direction: alternate-reverse;
+    }
+    @keyframes Lipsitakaanimation {
+        from{
+
+        }
+        to{
+            transform: translate(1000px);
+        }
+    }
+</style>
+    
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
