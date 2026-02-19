@@ -73,7 +73,7 @@
 .load a {
     font-size: 20px;
     text-decoration: none;
-    font-family: monospace;
+    font-family: sans-serif;
 }
 
 .load button {
@@ -83,7 +83,7 @@
     border: none;
     border-radius: 4px;
     font-size: 15px;
-    font-family: monospace;
+    font-family: sans-serif;
 }
 
 .body {
@@ -95,7 +95,7 @@
 
 .text1 {
     font-size: 25px;
-    font-family: monospace;
+    font-family: sans-serif;
     margin-left: -3px;
 }
 
@@ -125,7 +125,7 @@
     border: none;
     border-radius: 4px;
     font-size: 15px;
-    font-family: monospace;
+    font-family: sans-serif;
 }
 
 .lang {
@@ -144,4 +144,14 @@
     text-decoration: none;
     background-color: rgb(238, 185, 80);
     color: black;
+}
+
+
+@media screen and (max-width : 1145px) {
+    .container1 {
+  
+    grid-template-columns: 400px;
+    
+}
+    
 }
