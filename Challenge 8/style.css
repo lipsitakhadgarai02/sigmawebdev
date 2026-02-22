@@ -14,32 +14,30 @@
     border-radius: 70px;
     bottom: 0;
     left: 0;
+    animation: animatex 3s linear infinite, animatey 1s ease-out infinite alternate;
 
 }
-@keyframes bouncinganimation {
-    0% {
 
-            -ms-transform-origin-x: 20px;
-        }
+@keyframes animatex {
+    from {
+        left: 0;
+    }
 
-        20% {
+    to {
+        left: 100%;
+    }
 
-            transform: rotate(200deg)
-        }
 
-        50% {
+}
 
-            transform: rotate(220deg)
-        }
+@keyframes animatey {
+    from {
+        bottom: 0;
+    }
 
-        80% {
+    to {
+        bottom: 100%;
+    }
 
-            transform: rotate(300deg)
-        }
 
-        100% {
-            transform: rotate(310deg)
-        }
-
-    
 }
